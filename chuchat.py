@@ -1,5 +1,9 @@
-from flask import Flask
+from flask import Flask, request
+
 app = Flask(__name__)
-@app.route('/')
-def hello_world():
-    return 'Hello Sumit, ab sir mat khana'
+@app.route("/json", methods=["POST"])
+def json_example():
+
+    req = request.get_json()
+    print(req)
+    return req["idiot"]
