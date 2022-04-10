@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, make_response
 import json
 
 app = Flask(__name__)
-@app.route("/json", methods=["POST"])
+@app.route("/login", methods=["POST"])
 def json_example():
     req = request.get_json()
     if "username" not in req or "password" not in req:
