@@ -22,10 +22,10 @@ def json_example():
             }), 200)
         else:
             return make_response(jsonify({
-                "message": "Invalid Username or password"
+                "message": "Invalid Username/password"
             }), 400)
     else:
         return make_response(jsonify({
-            "message": "Invalid Username"
+            "message": "Invalid Username "
         }), 400)
    
